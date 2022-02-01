@@ -19,5 +19,5 @@ from email_newsletter.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home),
+    path('', include('email_newsletter.urls')),
 ]
