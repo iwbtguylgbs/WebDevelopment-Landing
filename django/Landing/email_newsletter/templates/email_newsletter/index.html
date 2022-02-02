@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Форма</title>
+    </head>
+    <body>
+        <!-- Комментарий -->
+        <h3>Введите данные {{name}}{{city}}{{phone}}{{mail}}.</h3>
+        
+        <form method="post" action = ''>
+            {% csrf_token %}
+            <fieldest>
+                <legend>Контактная информация</legend>
+                <label for="name">Имя</label>
+                <input id="name" name="name" type="text" required placeholder="Ваше имя">
+                <br>
+
+                <label for="city">Город</label>
+                <input id="city" name="city" type="text" required placeholder="Город">
+                <br>
+
+                <label for="phone">Телефон</label>
+                <input id="phone" name="phone" type="text" required placeholder="Номер телефона">
+                <br>
+
+                <label for="mail">Электронная почта</label>
+                <input id="mail" name="mail" type="text" required placeholder="Электронная почта">
+                <br>
+                
+                <button type="submit">Отправить</button> 
+            </fieldest>
+        <form>
+    </body>
+</html>
