@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'email_newsletter.apps.EmailNewsletterConfig',
+    'phonenumber_field',
 ]
 
 MIDDLEWARE = [
