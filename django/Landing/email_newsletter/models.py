@@ -1,15 +1,17 @@
 from django.db import models
-from phonenumber_field.modelfields import PhoneNumberField
+#from phonenumber_field.modelfields import PhoneNumberField
 
 # Create your models here.
 #pip install django-phonenumber-field[phonenumberslite]
 #person = models.PeopleList.objects.get(id = 25)
 #phoneNumber = person.number.as_e164
 
+LAST_EMAIL = ''
+
 class PeopleList(models.Model):
     name = models.CharField(max_length=255)
     city = models.CharField(max_length=255)
-    number = PhoneNumberField()
+    number = models.CharField(max_length=12)
     mail = models.EmailField()
 
 
