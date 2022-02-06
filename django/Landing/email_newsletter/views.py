@@ -9,12 +9,14 @@ from email.mime.multipart import MIMEMultipart
 def home(request):
     name = ''
     city = ''
+    age = ''
     phone = ''
     mail = ''
 
     context = {
         'name': '',
         'city': '',
+        'age': '',
         'phone': '',
         'mail': '',
     }
@@ -25,12 +27,12 @@ def home(request):
         city = request.POST['city']
         phone = request.POST['phone']
         mail = request.POST['mail']
-        global LAST_EMAIL
-        LAST_EMAIL = mail
+        age = request.POST['age']
         
         context = {
             'name': name,
             'city': city,
+            'age': age,
             'phone': phone,
             'mail': mail,
         }
@@ -38,7 +40,8 @@ def home(request):
 
     if context['mail'] != '':
         #savedata(context)
-        sendmail(context['mail'])
+        #sendmail(context['mail'])
+        pass
 
     return render(request, 'email_newsletter/index.html')
 
@@ -70,3 +73,6 @@ def sendmail(mail):
     server.quit()
 
     print('ПИСЬМО ОТПРАВЛЕНО ##')
+
+def construct_mail():
+    pass
