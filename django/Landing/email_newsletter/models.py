@@ -37,7 +37,7 @@ courses_names = {
     '18+': 'Промышленное использование языка C++, Промышленное использование языка JavaScript и Профессианальное изучение языка Python',
 }
 
-welcome_mail_before_course_img = '''
+welcome_mail_before_name = '''
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office" style="font-family:arial, 'helvetica neue', helvetica, sans-serif">
  <head> 
@@ -157,7 +157,9 @@ a[x-apple-data-detectors] {
                       <td align="center" style="padding:0;Margin:0;padding-top:10px;padding-bottom:10px;font-size:0px"><img src="https://tvmcto.stripocdn.email/content/guids/CABINET_301d3caecc3d6ea200fd1f254f407581/images/celovek_s_noutom_kopia.jpg" alt style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" width="560" height="356"></td> 
                      </tr> 
                      <tr> 
-                      <td align="center" class="es-m-p0r es-m-p0l" style="Margin:0;padding-top:10px;padding-bottom:10px;padding-left:40px;padding-right:40px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:24px;color:#333333;font-size:16px">Здравствуйте, *|FNAME|*! Спасибо, что оставили свои данные для связи с вами! На их основе мы составили вам рекомендации!</p></td> 
+                      <td align="center" class="es-m-p0r es-m-p0l" style="Margin:0;padding-top:10px;padding-bottom:10px;padding-left:40px;padding-right:40px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:24px;color:#333333;font-size:16px">Здравствуйте, '''
+
+welcome_mail_after_name_before_city = '''. Спасибо, что оставили свои данные для связи с вами! На их основе мы составили вам рекомендации!</p></td> 
                      </tr> 
                      <tr> 
                       <td align="center" style="padding:20px;Margin:0;font-size:0"> 
@@ -178,11 +180,15 @@ a[x-apple-data-detectors] {
                   <td align="center" valign="top" style="padding:0;Margin:0;width:560px"> 
                    <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px"> 
                      <tr> 
-                      <td align="left" style="padding:0;Margin:0"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:24px;color:#333333;font-size:16px">В своём письме, вы указали, что проживаете в городе {{city}}, и спешим вам сообщить, что там, у нас {{platform_count_string}}. Но вы тем не менее можете присоединиться к онлайн-занятиям, и получать знания в таком же объёме!</p></td> 
-                     </tr> 
+                      <td align="center" style="padding:0;Margin:0"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:24px;color:#333333;font-size:16px">В своём письме, вы указали, что проживаете в городе '''
+
+welcome_mail_after_city_before_platform = ''', и спешим вам сообщить, что там, у нас '''
+
+welcome_mail_after_platform = '''. Но вы тем не менее можете присоединиться к онлайн-занятиям, и получать знания в таком же объёме!</p></td> 
+                     </tr><br>
                      <tr> 
                       <td align="left" style="padding:0;Margin:0"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:24px;color:#333333;font-size:16px">На основе вашей возрастной группы, мы рекомендуем вам следующие курсы:<br><br></p></td> 
-                     </tr><hr>
+                     </tr>
                      
                      '''
 
@@ -499,15 +505,15 @@ welcome_mail_after_course_img = '''
                       <td align="center" style="padding:0;Margin:0;padding-top:15px;padding-bottom:15px;font-size:0"> 
                        <table cellpadding="0" cellspacing="0" class="es-table-not-adapt es-social" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px"> 
                          <tr> 
-                          <td align="center" valign="top" style="padding:0;Margin:0;padding-right:40px"><img title="Facebook" src="https://tvmcto.stripocdn.email/content/assets/img/social-icons/logo-black/facebook-logo-black.png" alt="Fb" width="32" height="32" style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic"></td> 
-                          <td align="center" valign="top" style="padding:0;Margin:0;padding-right:40px"><img title="Twitter" src="https://tvmcto.stripocdn.email/content/assets/img/social-icons/logo-black/twitter-logo-black.png" alt="Tw" width="32" height="32" style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic"></td> 
-                          <td align="center" valign="top" style="padding:0;Margin:0;padding-right:40px"><img title="Instagram" src="https://tvmcto.stripocdn.email/content/assets/img/social-icons/logo-black/instagram-logo-black.png" alt="Inst" width="32" height="32" style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic"></td> 
-                          <td align="center" valign="top" style="padding:0;Margin:0"><img title="Youtube" src="https://tvmcto.stripocdn.email/content/assets/img/social-icons/logo-black/youtube-logo-black.png" alt="Yt" width="32" height="32" style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic"></td> 
+                          <td align="center" valign="top" style="padding:0;Margin:0;padding-right:40px"><a href = 'https://ru-ru.facebook.com/'><img title="Facebook" src="https://tvmcto.stripocdn.email/content/assets/img/social-icons/logo-black/facebook-logo-black.png" alt="Fb" width="32" height="32" style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic"></a></td> 
+                          <td align="center" valign="top" style="padding:0;Margin:0;padding-right:40px"><a href = 'https://vk.com/iwbtguy'><img title="VK" src="https://i.ibb.co/pXCmVcY/vk.png" alt="Tw" width="32" height="32" style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic"></a></td> 
+                          <td align="center" valign="top" style="padding:0;Margin:0;padding-right:40px"><a href = 'https://www.instagram.com/iwbtguy_/'><img title="Instagram" src="https://tvmcto.stripocdn.email/content/assets/img/social-icons/logo-black/instagram-logo-black.png" alt="Inst" width="32" height="32" style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic"></a></td> 
+                          <td align="center" valign="top" style="padding:0;Margin:0"><a href = 'https://www.youtube.com/?hl=RU'><img title="Youtube" src="https://tvmcto.stripocdn.email/content/assets/img/social-icons/logo-black/youtube-logo-black.png" alt="Yt" width="32" height="32" style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic"></a></td> 
                          </tr> 
                        </table></td> 
                      </tr> 
                      <tr> 
-                      <td align="center" style="padding:0;Margin:0;padding-bottom:35px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:18px;color:#333333;font-size:12px">LambdaTutoring © 2022 LabdaTutoring, Inc. Все права сохранены.<br>пр. Ленина, 36, Обнинск, Калужская обл., РФ, 249033<br></p></td> 
+                      <td align="center" style="padding:0;Margin:0;padding-bottom:35px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:18px;color:#333333;font-size:12px">LambdaTutoring © 2022 LambdaTutoring, Inc. Все права сохранены.<br>пр. Ленина, 36, Обнинск, Калужская обл., РФ, 249033<br></p></td> 
                      </tr> 
                    </table></td> 
                  </tr> 
@@ -543,7 +549,10 @@ welcome_mail_after_course_img = '''
 </html>
 '''
 
-welcome_mail = '''
+
+
+
+welcome_mail_blank_not_working = '''
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office" style="font-family:arial, 'helvetica neue', helvetica, sans-serif">
  <head> 
@@ -663,7 +672,7 @@ a[x-apple-data-detectors] {
                       <td align="center" style="padding:0;Margin:0;padding-top:10px;padding-bottom:10px;font-size:0px"><img src="https://tvmcto.stripocdn.email/content/guids/CABINET_301d3caecc3d6ea200fd1f254f407581/images/celovek_s_noutom_kopia.jpg" alt style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" width="560" height="356"></td> 
                      </tr> 
                      <tr> 
-                      <td align="center" class="es-m-p0r es-m-p0l" style="Margin:0;padding-top:10px;padding-bottom:10px;padding-left:40px;padding-right:40px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:24px;color:#333333;font-size:16px">Здравствуйте, *|FNAME|*! Спасибо, что оставили свои данные для связи с вами! На их основе мы составили вам рекомендации!</p></td> 
+                      <td align="center" class="es-m-p0r es-m-p0l" style="Margin:0;padding-top:10px;padding-bottom:10px;padding-left:40px;padding-right:40px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:24px;color:#333333;font-size:16px">Здравствуйте, {NAME}! Спасибо, что оставили свои данные для связи с вами! На их основе мы составили вам рекомендации!</p></td> 
                      </tr> 
                      <tr> 
                       <td align="center" style="padding:20px;Margin:0;font-size:0"> 
@@ -684,14 +693,20 @@ a[x-apple-data-detectors] {
                   <td align="center" valign="top" style="padding:0;Margin:0;width:560px"> 
                    <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px"> 
                      <tr> 
-                      <td align="left" style="padding:0;Margin:0"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:24px;color:#333333;font-size:16px">В своём письме, вы указали, что проживаете в городе {{city}}, и спешим вам сообщить, что там, у нас {{platform_count_string}}. Но вы тем не менее можете присоединиться к онлайн-занятиям, и получать знания в таком же объёме!</p></td> 
+                      <td align="left" style="padding:0;Margin:0"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:24px;color:#333333;font-size:16px">В своём письме, вы указали, что проживаете в городе {CITY}, и спешим вам сообщить, что там, у нас {PLATFORM_COUNT_MESSAGE}. Но вы тем не менее можете присоединиться к онлайн-занятиям, и получать знания в таком же объёме!</p></td> 
                      </tr> 
                      <tr> 
                       <td align="left" style="padding:0;Margin:0"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:24px;color:#333333;font-size:16px">На основе вашей возрастной группы, мы рекомендуем вам следующие курсы:<br><br></p></td> 
                      </tr> 
+                     <tr><hr>
+                      <td align="center" style="padding:0;Margin:0;font-size:0px"><img class="adapt-img" src="{FIRST_IMG_SRC}" alt style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" width="560" height="320"></td> 
+                     </tr><hr>
                      <tr> 
-                      <td align="center" style="padding:0;Margin:0;font-size:0px"><img class="adapt-img" src="https://i.ibb.co/XVH9yLm/start-it.png" alt style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" width="560" height="320"></td> 
-                     </tr> 
+                      <td align="center" style="padding:0;Margin:0;font-size:0px"><img class="adapt-img" src="{SECOND_IMG_SRC}" alt style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" width="560" height="320"></td> 
+                     </tr><hr>
+                     <tr> 
+                      <td align="center" style="padding:0;Margin:0;font-size:0px"><img class="adapt-img" src="{THIRD_IMG_SRC}" alt style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" width="560" height="320"></td> 
+                     </tr><hr>
                      <tr> 
                       <td align="center" style="padding:20px;Margin:0;font-size:0"> 
                        <table border="0" width="100%" height="100%" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px"> 
@@ -973,7 +988,7 @@ a[x-apple-data-detectors] {
                   <td align="center" valign="top" style="padding:0;Margin:0;width:560px"> 
                    <table cellpadding="0" cellspacing="0" width="100%" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:separate;border-spacing:0px;border-radius:5px" role="presentation"> 
                      <tr> 
-                      <td align="center" style="padding:0;Margin:0;padding-top:10px;padding-bottom:10px"><span class="es-button-border" style="border-style:solid;border-color:#2CB543;background:#5C68E2;border-width:0px;display:inline-block;border-radius:6px;width:auto"><a href="" class="es-button" target="_blank" style="mso-style-priority:100 !important;text-decoration:none;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;color:#FFFFFF;font-size:20px;border-style:solid;border-color:#5C68E2;border-width:10px 30px 10px 30px;display:inline-block;background:#5C68E2;border-radius:6px;font-family:arial, 'helvetica neue', helvetica, sans-serif;font-weight:normal;font-style:normal;line-height:24px;width:auto;text-align:center;border-left-width:30px;border-right-width:30px">Записаться на курс!</a></span></td> 
+                      <td align="center" style="padding:0;Margin:0;padding-top:10px;padding-bottom:10px"><span class="es-button-border" style="border-style:solid;border-color:#2CB543;background:#5C68E2;border-width:0px;display:inline-block;border-radius:6px;width:auto"><a href="https://www.instagram.com/iwbtguy_/" class="es-button" target="_blank" style="mso-style-priority:100 !important;text-decoration:none;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;color:#FFFFFF;font-size:20px;border-style:solid;border-color:#5C68E2;border-width:10px 30px 10px 30px;display:inline-block;background:#5C68E2;border-radius:6px;font-family:arial, 'helvetica neue', helvetica, sans-serif;font-weight:normal;font-style:normal;line-height:24px;width:auto;text-align:center;border-left-width:30px;border-right-width:30px">Записаться на курс!</a></span></td> 
                      </tr> 
                    </table></td> 
                  </tr> 

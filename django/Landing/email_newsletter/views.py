@@ -72,18 +72,44 @@ def sendmail(context, page):
     server.sendmail(from_email, to_email, msg.as_string())
     server.quit()
 
-    print('ПИСЬМО ОТПРАВЛЕНО ##')
-
 def construct_mail(context):
-    page = welcome_mail_before_course_img
+    page = welcome_mail_before_name
+
+    NAME = context['name']
+    page += NAME
+    page += welcome_mail_after_name_before_city
+
+    CITY = context['city']
+    page += CITY
+    page += welcome_mail_after_city_before_platform
+
+    PLATFORM_COUNT = '3'
+    page += PLATFORM_COUNT
+    page += welcome_mail_after_platform
+
     images = ''
+
     for i in range(len(courses_src[context['age']])):
         blank = ''
+
         blank += blank_course_before
         link = courses_src[context['age']][i]
         blank += link
         blank += blank_course_after
+        
         images += blank
+
     page += images
     page += welcome_mail_after_course_img
     return page
+
+def old_construct_mail(context):
+    name = context["name"]
+    city = context["city"]
+    platform_count_message = '3'
+
+    first = courses_src[context["age"]][0]
+    second = courses_src[context["age"]][1]
+    third = courses_src[context["age"]][2]
+
+    #.format(NAME = name, CITY = city, PLATFORM_COUNT_MESSAGE = platform_count_message, FIRST_IMG_SRC = first, SECOND_IMG_SRC = second, THIRD_IMG_SRC = third)
