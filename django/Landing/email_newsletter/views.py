@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import PeopleList, LAST_EMAIL
+from .models import PeopleList, welcome_mail
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
@@ -59,9 +59,10 @@ def sendmail(mail):
     from_email = 'lambda.tutoring.ru@gmail.com'
     password = 'lambda_tutoring_ru_QuTyh230_9'
     to_email = mail
-    message = "еще одно письмо!"
+    message = welcome_mail
 
-    msg.attach(MIMEText(message, 'plain'))
+    msg.attach(MIMEText(message, 'html'))
+    msg['Subject'] = "Обучение на курсах LambdaLanding!"
     server = smtplib.SMTP('smtp.gmail.com: 587')
     server.starttls()
     server.login(from_email, password)
