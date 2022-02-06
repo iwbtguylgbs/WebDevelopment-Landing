@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import PeopleList, welcome_mail
+from .models import *
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
@@ -40,7 +40,7 @@ def home(request):
 
     if context['mail'] != '':
         #savedata(context)
-        #sendmail(context['mail'])
+        sendmail(context, construct_mail(context))
         pass
 
     return render(request, 'email_newsletter/index.html')
@@ -56,16 +56,16 @@ def savedata(context):
         mail=context["mail"]
     )
 
-def sendmail(mail):
+def sendmail(context, page):
     msg = MIMEMultipart()
 
     from_email = 'lambda.tutoring.ru@gmail.com'
     password = 'lambda_tutoring_ru_QuTyh230_9'
-    to_email = mail
-    message = welcome_mail
+    to_email = context["mail"]
+    message = page
 
     msg.attach(MIMEText(message, 'html'))
-    msg['Subject'] = "Обучение на курсах LambdaLanding!"
+    msg['Subject'] = "Обучение на курсах LambdaTutoring!"
     server = smtplib.SMTP('smtp.gmail.com: 587')
     server.starttls()
     server.login(from_email, password)
@@ -74,5 +74,16 @@ def sendmail(mail):
 
     print('ПИСЬМО ОТПРАВЛЕНО ##')
 
-def construct_mail():
-    pass
+def construct_mail(context):
+    page = welcome_mail_before_course_img
+    images = ''
+    for i in range(len(courses_src[context['age']])):
+        blank = ''
+        blank += blank_course_before
+        link = courses_src[context['age']][i]
+        blank += link
+        blank += blank_course_after
+        images += blank
+    page += images
+    page += welcome_mail_after_course_img
+    return page
