@@ -37,11 +37,9 @@ def home(request):
             'mail': mail,
         }
         print(context)
-
-    if context['mail'] != '':
+    if context["mail"] != '':
         #savedata(context)
         sendmail(context, construct_mail(context))
-        pass
 
     return render(request, 'email_newsletter/index.html')
 
@@ -83,7 +81,7 @@ def construct_mail(context):
     page += CITY
     page += welcome_mail_after_city_before_platform
 
-    PLATFORM_COUNT = '3'
+    PLATFORM_COUNT = construct_platforms(CITY)
     page += PLATFORM_COUNT
     page += welcome_mail_after_platform
 
@@ -103,13 +101,18 @@ def construct_mail(context):
     page += welcome_mail_after_course_img
     return page
 
-def old_construct_mail(context):
-    name = context["name"]
-    city = context["city"]
-    platform_count_message = '3'
+def construct_platforms(city_name):
+    try:
+        platform_info = PlatformsList.objects.get(city = city_name)
+        number = platform_info.number
+        adresses = platform_info.adresses
+        adresses_array = adresses.split(';')
+        adresses = ''
+        for i in adresses_array:
+            adresses += i
+            adresses += '<br>'
 
-    first = courses_src[context["age"]][0]
-    second = courses_src[context["age"]][1]
-    third = courses_src[context["age"]][2]
+        return f'есть {number} площадок по следующим адресам: <br><br>{adresses}'
 
-    #.format(NAME = name, CITY = city, PLATFORM_COUNT_MESSAGE = platform_count_message, FIRST_IMG_SRC = first, SECOND_IMG_SRC = second, THIRD_IMG_SRC = third)
+    except Exception:
+        return 'нет площадок в этом городе. '

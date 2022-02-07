@@ -13,6 +13,11 @@ class PeopleList(models.Model):
     number = models.CharField(max_length=12)
     mail = models.EmailField()
 
+class PlatformsList(models.Model):
+    city = models.CharField(max_length=255)
+    number = models.IntegerField()
+    adresses = models.TextField()
+
 courses_src = {
     '10-14': [
         'https://i.ibb.co/XVH9yLm/start-it.png',
@@ -148,16 +153,16 @@ a[x-apple-data-detectors] {
           <td align="center" style="padding:0;Margin:0"> 
            <table bgcolor="#ffffff" class="es-content-body" align="center" cellpadding="0" cellspacing="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:#FFFFFF;width:600px"> 
              <tr> 
-              <td align="left" style="Margin:0;padding-top:15px;padding-left:20px;padding-right:20px;padding-bottom:30px"> 
+              <td align="left" style="Margin:0;padding-top:15px;padding-left:20px;padding-right:20px;padding-bottom:0px"> 
                <table cellpadding="0" cellspacing="0" width="100%" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px"> 
                  <tr> 
                   <td align="center" valign="top" style="padding:0;Margin:0;width:560px"> 
                    <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px"> 
                      <tr> 
-                      <td align="center" style="padding:0;Margin:0;padding-top:10px;padding-bottom:10px;font-size:0px"><img src="https://tvmcto.stripocdn.email/content/guids/CABINET_301d3caecc3d6ea200fd1f254f407581/images/celovek_s_noutom_kopia.jpg" alt style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" width="560" height="356"></td> 
+                      <td align="center" style="padding:0;Margin:0;padding-top:10px;padding-bottom:0px;font-size:0px"><img src="https://tvmcto.stripocdn.email/content/guids/CABINET_301d3caecc3d6ea200fd1f254f407581/images/celovek_s_noutom_kopia.jpg" alt style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" width="560" height="356"></td> 
                      </tr> 
                      <tr> 
-                      <td align="center" class="es-m-p0r es-m-p0l" style="Margin:0;padding-top:10px;padding-bottom:10px;padding-left:40px;padding-right:40px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:24px;color:#333333;font-size:16px">Здравствуйте, '''
+                      <td align="center" class="es-m-p0r es-m-p0l" style="Margin:0;padding-top:0px;padding-bottom:0px;padding-left:40px;padding-right:40px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:24px;color:#333333;font-size:16px">Здравствуйте, '''
 
 welcome_mail_after_name_before_city = '''. Спасибо, что оставили свои данные для связи с вами! На их основе мы составили вам рекомендации!</p></td> 
                      </tr> 
@@ -174,7 +179,7 @@ welcome_mail_after_name_before_city = '''. Спасибо, что оставил
                </table></td> 
              </tr> 
              <tr> 
-              <td align="left" style="padding:0;Margin:0;padding-top:20px;padding-left:20px;padding-right:20px"> 
+              <td align="left" style="padding:0;Margin:0;padding-top:0px;padding-left:20px;padding-right:20px"> 
                <table cellpadding="0" cellspacing="0" width="100%" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px"> 
                  <tr> 
                   <td align="center" valign="top" style="padding:0;Margin:0;width:560px"> 
@@ -184,7 +189,7 @@ welcome_mail_after_name_before_city = '''. Спасибо, что оставил
 
 welcome_mail_after_city_before_platform = ''', и спешим вам сообщить, что там, у нас '''
 
-welcome_mail_after_platform = '''. Но вы тем не менее можете присоединиться к онлайн-занятиям, и получать знания в таком же объёме!</p></td> 
+welcome_mail_after_platform = '''Но вы тем не менее можете присоединиться к онлайн-занятиям, и получать знания в таком же объёме!</p></td> 
                      </tr><br>
                      <tr> 
                       <td align="left" style="padding:0;Margin:0"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:24px;color:#333333;font-size:16px">На основе вашей возрастной группы, мы рекомендуем вам следующие курсы:<br><br></p></td> 
