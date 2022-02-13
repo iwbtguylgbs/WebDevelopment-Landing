@@ -50,6 +50,7 @@ def savedata(context):
     blank = PeopleList.objects.create(
         name=context["name"],
         city=context["city"],
+        age=context["age"],
         number=context["phone"],
         mail=context["mail"]
     )

@@ -1,0 +1,15 @@
+body {
+    font-family: 'Caveat', cursive;
+    font-size: 96px;    
+}
+
+html, body {
+    min-height: 5%;
+}
+
+.container {
+    width: 272px;
+    height: 121px;
+    border: 1px solid red;
+
+}
