@@ -1,15 +1,166 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
+    padding: 0;
+    margin: 0;
     font-family: 'Caveat', cursive;
-    font-size: 96px;    
+    font-size: 48px;    
+    letter-spacing: 0.03em;
+    line-height: 1.55em;
 }
 
-html, body {
-    min-height: 5%;
+* {
+    box-sizing: border-box;
 }
 
-.container {
-    width: 272px;
-    height: 121px;
-    border: 1px solid red;
+p {
+    margin: 0;
+    letter-spacing: 0.03em;
+    line-height: 0.8em;
+}
 
+a {
+    text-decoration: none;
+}
+
+
+
+
+.nav {
+    padding-left: 128px;
+    padding-right: 128px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+}
+
+.logo-text {
+    width: 201.85px;
+    height: 64px;
+}
+
+.nav-header {
+    color: #EC9448; 
+}
+
+.btn {
+    text-align: center;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 90px;
+    color: white;
+    background-color: #EC9448;
+}
+
+.img_desc {
+    width: 100%;
+}
+
+
+.about-section {
+    padding-top: 108px;
+}
+
+.about-bar{
+    padding-top: 89px;
+    padding-left: 96px;
+    padding-right: 96px;
+
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+}
+
+.block-name{
+    font-size: 72px;
+    text-align: center;
+}
+
+
+.text-photo-bar {
+    display: flex;
+    justify-content: space-between;   
+    padding-top: 135px;
+}
+
+.lessons-bar {
+    display: flex;
+    justify-content: space-between;   
+}
+
+.review-bar {
+    display: flex;
+    justify-content: space-between;   
+}
+
+.label {
+    font-family: 'Comfortaa', serif;
+    font-size: 36px;  
+    color: white;  
+}
+
+.form-access {
+    background-color: #EC9448;
+    border-radius: 90px;
+    width: 608px;
+    height: 928px;
+    padding-left: 64px;
+    padding-top: 79px;
+}
+
+input {
+    border: none;
+    border-radius: 15px;
+    width: 480px;
+    height: 48px;
+    margin-bottom: 30px;
+
+    font-family: 'Comfortaa', serif;
+    font-size: 24px;
+    padding-left: 16px;
+}
+
+select {
+    border: none;
+    border-radius: 15px;
+    width: 200px;
+    height: 48px;
+    margin-bottom: 30px;
+
+    font-family: 'Comfortaa', serif;
+    font-size: 24px;
+    padding-left: 16px;
+}
+
+button {
+    border: none;
+    border-radius: 15px;
+    width: 480px;
+    height: 96px;
+    margin-bottom: 30px;
+    background-color: #ECB648;
+    color: white;
+
+    font-family: 'Comfortaa', serif;
+    font-size: 48px;
+    padding-top: 16px;
+}
+
+button:hover {
+    background-color: #daa63e;
+}
+
+button:active {
+    background-color: #c5973b;
+}
+
+.form-block {
+    display: flex;
+    justify-content: space-between;  
 }

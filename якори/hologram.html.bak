@@ -50,7 +50,7 @@
         </div>
     </section>
 
-    <section class="program-section" style="margin-top:94px;margin-bottom:135px;margin-right:96px;margin-left:96px;">
+    <section class="program-section" style="margin-top:94px;margin-bottom:135px;margin-right:128px;margin-left:128px;">
         <a name="program"><p class="block-name">~Авторская программа~</p></a>
         <div class="program-bar">
             <div class="text-photo-bar" style="padding-top:85px">
@@ -79,7 +79,7 @@
         </div>
     </section>
 
-    <section class="lessons-section" style="margin-top:94px;margin-left:96px;">
+    <section class="lessons-section" style="margin-top:94px;margin-left:128px;">
         <a name="lessons"><p class="block-name">~Как проходят занятия~</p></a>
         <div class="lessons-bar" style="margin-top:125px; width:514px;">
             <div>
@@ -87,7 +87,7 @@
                 <img src="img/lessons/3.png" style="width:469px; margin-left: 46px; margin-top: 32px;" alt="kids-lessons">
                 <img src="img/lessons/5.png" style="width:304px; margin-left: 212px; margin-top: 32px;" alt="kids-lessons">
             </div>
-            <div style="padding-left: 64px; margin-right:96px">
+            <div style="padding-left: 64px; margin-right:128px">
                 <img src="img/lessons/2.png" style="width:667px; height: 478px;" alt="kids-lessons">
                 <img src="img/lessons/4.png" style="width:673px; margin-top: 32px;" alt="kids-lessons">
             </div>
