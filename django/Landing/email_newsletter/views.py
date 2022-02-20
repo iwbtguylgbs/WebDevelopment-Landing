@@ -22,7 +22,6 @@ def home(request):
     }
 
     if request.method == 'POST':
-        print(context)
         name = request.POST['name']
         city = request.POST['city']
         phone = request.POST['phone']
@@ -36,15 +35,12 @@ def home(request):
             'phone': phone,
             'mail': mail,
         }
-        print(context)
+        
     if context["mail"] != '':
-        #savedata(context)
+        savedata(context)
         sendmail(context, construct_mail(context))
 
     return render(request, 'email_newsletter/index.html')
-
-def test(request):
-    return HttpResponse("<h1>I'm a free bitch, baby!</h1>")
 
 def savedata(context):
     blank = PeopleList.objects.create(
@@ -64,7 +60,7 @@ def sendmail(context, page):
     message = page
 
     msg.attach(MIMEText(message, 'html'))
-    msg['Subject'] = "Обучение на курсах LambdaTutoring!"
+    msg['Subject'] = "Обучение на курсах LambdaLearning!"
     server = smtplib.SMTP('smtp.gmail.com: 587')
     server.starttls()
     server.login(from_email, password)
@@ -108,12 +104,16 @@ def construct_platforms(city_name):
         number = platform_info.number
         adresses = platform_info.adresses
         adresses_array = adresses.split(';')
+        adresses_array.pop(-1)
         adresses = ''
+        num = 0
         for i in adresses_array:
+            num += 1
+            adresses += f'{num}. '
             adresses += i
             adresses += '<br>'
 
-        return f'есть {number} площадок по следующим адресам: <br><br>{adresses}'
+        return f'есть площадки по следующим адресам: <br><br>{adresses}<br>'
 
     except Exception:
         return 'нет площадок в этом городе. '
